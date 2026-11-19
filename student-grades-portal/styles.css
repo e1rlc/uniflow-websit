@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+}
+
+.side {
+    width: 23%;
+    min-width: 240px;
+    padding: 120px 40px;
+    background-color: #0b4a35;
+    color: #fff;
+}
+
+.side h1 {
+    margin: 0 0 20px;
+    font-family: Georgia, serif;
+    font-size: 2.6rem;
+    line-height: 1.2;
+}
+
+.side hr {
+    width: 50px;
+    margin: 0 0 25px;
+    border: none;
+    border-top: 2px solid #fff;
+}
+
+.side p {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    background-image: url("images/pic.png");  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;             
+}
+
+.card {
+    width: 420px;
+    max-width: 100%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.92);
+    text-align: center;
+    border-radius: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    margin: 0 0 10px;
+    font-family: Georgia, serif;
+    font-size: 2rem;
+    color: #0b4a35;
+}
+
+.sub {
+    margin: 0 0 24px;
+    color: #0b4a35;
+    line-height: 1.5;
+}
+
+.cap {
+    display: block;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 16px;
+}
+
+.side .cap {
+    margin-left: 0;
+    color: #e6efe9;
+}
+
+.card .cap {
+    color: #0b4a35;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    padding: 0 16px;
+    background-color: #e8eee9;
+    border-radius: 999px;
+    color: #0b4a35;
+}
+
+.field svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+}
+
+.field input {
+    flex: 1;
+    padding: 14px 10px;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: #0b4a35;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #083828;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+    font-size: 0.9rem;       
+    color: #0b4a35;          
+}
+
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-top: 1px solid #0b4a35;
+}
+
+.btn {
+    display: block;
+    padding: 14px;
+    background-color: #0b4a35;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 999px;
+}
+
+.btn:hover {
+    background-color: #083828;
+}
+.btn-light {
+    margin-top: 12px;
+    background-color: #e8eee9;
+    color: #0b4a35;
+}
+
+.btn-light:hover {
+    background-color: #d5ddd7;
+}
+
+.btn + .btn {
+    margin-top: 12px;
+}
+
+.result {
+    margin: 0 0 16px;
+    padding: 12px;
+    background-color: #e3f1e8;
+    color: #0b4a35;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.error {
+    margin: 0 0 16px;
+    padding: 12px;
+    background-color: #fbe9e7;
+    color: #b3261e;
+    border-radius: 12px;
+}
+
+.card.wide {
+    width: 640px;
+}
+
+.list-title {
+    margin-top: 28px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    margin-bottom: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    color: #0b4a35;
+}
+
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #d5ddd7;
+    text-align: left;
+}
+
+.login-error {
+    margin: 0 0 16px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: #fbe9e7;
+    color: #b3261e;
+    font-size: 0.9rem;
+    text-align: left;
+}
+.login-error[hidden] { display: none; }
+
+.field .eye-btn {
+    width: auto;
+    padding: 6px;
+    margin: 0;
+    background: transparent;
+    color: #0b4a35;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+.field .eye-btn:hover { background: #d5e6dc; }
+.field .eye-btn svg { width: 20px; height: 20px; }
+
+@media (max-width: 800px) {
+    .side {
+        display: none;
+    }
+}

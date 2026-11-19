@@ -1,0 +1,140 @@
+/* الرأس: صورة المبنى */
+.hero-art { width: 432px; max-width: none; right: 362px; top: -18px; opacity: 1; -webkit-mask-image: none; mask-image: none; }
+@media (max-width: 1350px) { .hero-art { display: none; } }
+
+/* القائمة الجانبية: زخرفة أسفل */
+.sidebar { overflow: hidden; }
+.sidebar::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 150px; pointer-events: none; z-index: 0;
+    background: url("images/pattern-sidebar.png") no-repeat center bottom / 100% auto;
+}
+.sidebar > * { position: relative; z-index: 1; }
+
+.pr-top { display: grid; grid-template-columns: minmax(0, .72fr) minmax(0, 1fr); gap: 16px; margin-bottom: 16px; align-items: stretch; }
+.pr-bot { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.pr-bot.one { grid-template-columns: 1fr; }
+@media (max-width: 1250px) { .pr-top, .pr-bot { grid-template-columns: 1fr; } }
+
+.pr-btn {
+    margin-left: auto; display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px;
+    border: 1px solid var(--green); background: #fff; color: var(--green); font-family: inherit; font-size: 0.8rem;
+    font-weight: 500; cursor: pointer; transition: background .25s, color .25s;
+}
+.pr-btn:hover { background: var(--green); color: #fff; }
+.pr-btn svg { width: 15px !important; height: 15px !important; color: inherit !important; }
+.pr-tools { margin-left: auto; display: inline-flex; gap: 8px; align-items: center; }
+.pr-tools .pr-btn { margin-left: 0; }
+.pr-sq {
+    width: 36px; height: 36px; border-radius: 50%; border: none; background: #fff; color: var(--green);
+    display: grid; place-items: center; cursor: pointer; box-shadow: 0 3px 10px rgba(11, 74, 53, .1); transition: transform .25s;
+}
+.pr-sq:hover { transform: scale(1.08); }
+.pr-sq svg { width: 16px !important; height: 16px !important; }
+
+/* بطاقة المعلومات الشخصية */
+.pr-personal {
+    position: relative; overflow: hidden;
+    background:
+        url("images/pattern-mandala.png") no-repeat left bottom / 52% auto,
+        url("images/pattern-mosque.png") no-repeat right bottom / 14% auto,
+        #fff;
+}
+.pr-personal > * { position: relative; z-index: 1; }
+.pr-person { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; padding: 4px 0 30px; }
+.pr-avatar {
+    position: relative; width: 170px; height: 170px; margin: 10px; flex-shrink: 0; border-radius: 50%;
+    background: var(--soft); border: 5px solid #fff; display: grid; place-items: center;
+    box-shadow: 0 0 0 5px #a9d6bd, 0 0 0 9px #e3f1e8, 0 10px 24px rgba(11, 74, 53, .18);
+}
+.pr-avatar img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
+.pr-avatar > span { font-size: 3.6rem; font-weight: 600; color: var(--green); }
+.pr-cam {
+    position: absolute; right: 2px; bottom: 6px; width: 40px; height: 40px; border-radius: 50%; border: 3px solid #fff;
+    background: var(--green); color: #fff; display: grid; place-items: center; cursor: pointer; padding: 0; transition: transform .25s;
+}
+.pr-cam:hover { transform: scale(1.1); }
+.pr-cam svg { width: 18px; height: 18px; }
+.pr-info { flex: 1; min-width: 210px; }
+.pr-info h2 { margin: 0; font-size: 1.3rem; font-weight: 600; }
+.pr-info > p { margin: 2px 0 12px; color: var(--text); }
+.pr-row { display: flex; align-items: center; gap: 10px; padding: 6px 0; font-size: 0.88rem; }
+.pr-row svg { width: 18px; height: 18px; color: var(--green); flex-shrink: 0; }
+.pr-row span { color: var(--muted); width: 98px; flex-shrink: 0; }
+.pr-row b { font-weight: 500; min-width: 0; overflow-wrap: anywhere; }
+.pr-row b.sm { font-size: 0.8rem; }
+.pr-row b.plain { margin-left: 0; }
+.pr-sep { height: 1px; background: var(--line); margin: 10px 0; }
+
+/* لوحة الهوية الرقمية */
+.pr-idpanel { background: linear-gradient(160deg, #f9fcfa, #eaf3ed); }
+.id-wrap { width: 100%; position: relative; }
+.id-card {
+    position: absolute; left: 0; top: 0; width: 720px; height: 400px; transform-origin: top left;
+    border-radius: 24px; overflow: hidden; background: #f3f0e4; box-shadow: 0 16px 36px rgba(11, 74, 53, .25);
+    font-family: "Poppins", Arial, sans-serif; color: #14281f;
+}
+.id-head { position: absolute; left: 0; right: 0; top: 0; height: 76px; background: #14513c; color: #fff; display: flex; align-items: center; justify-content: space-between; padding: 0 30px; z-index: 3; }
+.id-logo { display: flex; align-items: center; gap: 12px; }
+.id-logo svg { width: 46px; height: 46px; }
+.id-logo b { display: block; font-size: 26px; line-height: 1.05; font-weight: 600; }
+.id-logo small { font-size: 12px; opacity: .9; }
+.id-head em { font-family: Georgia, serif; font-size: 24px; display: flex; align-items: center; gap: 10px; }
+.id-head em svg { width: 30px; height: 30px; }
+.id-head::after { content: ""; position: absolute; left: 0; right: 0; bottom: -10px; height: 12px; background: linear-gradient(90deg, transparent, #d9c88a 30%, #e8d9a8 70%, transparent); border-radius: 50%; opacity: .8; }
+.id-corner { position: absolute; top: 76px; right: 0; width: 200px; z-index: 1; }
+.id-pagoda { position: absolute; right: 150px; bottom: 54px; width: 120px; opacity: .55; z-index: 1; }
+.id-photo {
+    position: absolute; left: 32px; top: 100px; width: 150px; height: 150px; border-radius: 18px; overflow: hidden;
+    background: #dcebe2; border: 4px solid #fff; display: grid; place-items: center; z-index: 2; box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+}
+.id-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.id-photo svg { width: 62%; height: 62%; }
+.id-barcode { position: absolute; left: 32px; top: 266px; width: 150px; height: 56px; background: #fff; padding: 6px 8px; z-index: 2; }
+.id-barcode svg { width: 100%; height: 100%; display: block; }
+.id-data { position: absolute; left: 212px; top: 98px; right: 150px; z-index: 2; }
+.id-data h4 { margin: 0; font-size: 30px; font-weight: 600; line-height: 1.15; }
+.id-data > p { margin: 2px 0 14px; font-size: 20px; }
+.id-data div { display: flex; font-size: 14px; padding: 3px 0; }
+.id-data div span { width: 118px; flex-shrink: 0; color: #4f6a5c; }
+.id-data div b { font-weight: 500; }
+.id-qr { position: absolute; right: 34px; top: 246px; width: 104px; height: 104px; background: #fff; padding: 6px; border-radius: 8px; z-index: 2; }
+.id-qr img, .id-qr canvas { width: 92px !important; height: 92px !important; display: block; }
+.id-foot { position: absolute; left: 0; right: 0; bottom: 0; height: 50px; background: #14513c; color: #fff; display: flex; align-items: center; justify-content: center; gap: 16px; font-family: Georgia, serif; font-style: italic; font-size: 20px; z-index: 3; }
+.id-foot i { width: 50px; height: 1px; background: rgba(255, 255, 255, .5); display: block; }
+
+/* الكروت السفلية */
+.pr-more { position: relative; overflow: hidden; background: url("images/pattern-moreinfo.png") no-repeat right top / 90px auto, #fff; }
+.pr-more > * { position: relative; z-index: 1; }
+.kv { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 13px 0; border-top: 1px solid var(--line); font-size: 0.88rem; }
+.kv span { display: inline-flex; align-items: center; gap: 12px; }
+.kv span svg { width: 18px; height: 18px; color: var(--green); flex-shrink: 0; }
+.kv b { font-weight: 500; text-align: right; }
+.st-pill { display: inline-block; padding: 4px 16px; border-radius: 999px; font-size: 0.8rem; background: #d6f0df; color: #0b6b3a; }
+.st-pill.inactive { background: #fff3cf; color: #8a6200; }
+.st-pill.graduated { background: #dcebf8; color: #1f5f99; }
+
+.pr-qa { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.pr-qa a, .pr-qa button {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; min-height: 92px; padding: 12px 8px;
+    border: 1px solid var(--line); border-radius: 16px; background: #f1f7f3; color: var(--text); font-family: inherit;
+    font-size: 0.82rem; text-align: center; text-decoration: none; cursor: pointer; transition: background .25s, color .25s, transform .25s;
+}
+.pr-qa svg { width: 24px; height: 24px; color: var(--green); transition: color .25s; }
+.pr-qa a:hover, .pr-qa button:hover { background: var(--green); color: #fff; transform: translateY(-3px); }
+.pr-qa a:hover svg, .pr-qa button:hover svg { color: #fff; }
+
+/* نافذة التكبير */
+.dlg.big { width: min(900px, 94vw); }
+.big-body { padding: 10px 22px 24px; }
+/* صورة الطالب: تملأ الإطار بالضبط */
+.pr-avatar img,
+.id-photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 25%;   /* يركز على الوجه، يعني القص من الأسفل أكثر */
+    display: block;
+}
+.pr-avatar img { border-radius: 50%; }
